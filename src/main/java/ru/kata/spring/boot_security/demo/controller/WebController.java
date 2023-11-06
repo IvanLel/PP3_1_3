@@ -88,5 +88,4 @@ public class WebController {
         model.addAttribute("user", new User());
         return EDIT_PAGE;
     }
-
 }

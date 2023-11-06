@@ -20,7 +20,6 @@ public class User implements UserDetails {
     @Column(name = "id")
     private long id;
 
-    @Column(name = "username")
     @NotEmpty(message = "Name must not be empty")
     @Size(min = 4, max = 25, message = "Username must be 4 to 25 characters long")
     @Pattern(regexp = "^[A-z]*$", message = "Must contain only latin letters")
@@ -36,7 +35,7 @@ public class User implements UserDetails {
     private String email;
 
     @Column(name = "age")
-    @Min(value = 0, message = "Age must be greater than zero")
+    @Min(value = 1, message = "Age must be greater than zero")
     @Max(value = 130, message = "Age cannot exceed 130 years")
     private int age;
 
